@@ -15,7 +15,7 @@ public class DummyServiceImpl
 {
 
     @ValidateMethod
-    public void doFailWithEmptyArg( @NotEmpty String arg )
+    public void doFailWithEmptyArg( String arg )
     {
     }
 
@@ -27,7 +27,7 @@ public class DummyServiceImpl
     }
 
     @ValidateMethod
-    public void doFailWithNullArg( @NotNull String arg ){}
+    public void doFailWithNullArg( String arg ){}
     
     @ValidateMethod
     public @NotNull DummyBean doFailWithNullResult()
@@ -36,7 +36,7 @@ public class DummyServiceImpl
     }
 
     @ValidateMethod
-    public @Valid DummyBean proceedOkWithDefinedArg( @NotEmpty String arg )
+    public @Valid DummyBean proceedOkWithDefinedArg( String arg )
     {
         DummyBean dummyBean = new DummyBean();
         dummyBean.setSomeProperty( "someProperty" );
