@@ -294,11 +294,13 @@
                     <artifactId>maven-shade-plugin</artifactId>
                     <version>1.4</version>
                 </plugin>
+		<!-- b0rken
                 <plugin>
                     <groupId>org.jboss.maven.plugins</groupId>
                     <artifactId>maven-jdocbook-plugin</artifactId>
                     <version>2.2.3</version>
                 </plugin>
+		-->
                 <plugin>
                     <groupId>org.jboss.maven.plugins</groupId>
                     <artifactId>maven-jdocbook-style-plugin</artifactId>
