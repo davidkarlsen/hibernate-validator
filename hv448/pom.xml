@@ -11,7 +11,7 @@
   <name>${project.artifactId}</name>
   <properties>
   	<spring.fw.version>3.0.5.RELEASE</spring.fw.version>
-  	<aspectj.version>1.6.10</aspectj.version>
+  	<aspectj.version>1.6.11</aspectj.version>
   	<project.build.java.target>1.6</project.build.java.target>
   </properties>
   <dependencies>
