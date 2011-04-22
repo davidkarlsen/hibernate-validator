@@ -1,10 +1,9 @@
 package org.hibernate.hv448.dummyservice;
 
-import javax.validation.constraints.NotNull;
 
 public class DummyBean
 {
-    @NotNull
+    @CompostiteTest
     private String someProperty;
     
     public void setSomeProperty( String someProperty )

@@ -1,5 +1,6 @@
 package org.hibernate.hv448.dummyservice;
 
+import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotEmpty;
@@ -11,10 +12,10 @@ public interface DummyService
     
     void doFailWithEmptyArg( @NotEmpty String arg );
     
-    DummyBean doFailWithInvalidResult();
+    @Valid DummyBean doFailWithInvalidResult();
     
-    DummyBean doFailWithNullResult();
+    @NotNull DummyBean doFailWithNullResult();
     
-    DummyBean proceedOkWithDefinedArg( @NotEmpty String arg );
+    @Valid DummyBean proceedOkWithDefinedArg( @NotEmpty String arg );
 
 }

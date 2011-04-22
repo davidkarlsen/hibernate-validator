@@ -1,10 +1,6 @@
 package org.hibernate.hv448.dummyservice;
 
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import org.hibernate.hv448.ValidateMethod;
-import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.stereotype.Service;
 
 
@@ -20,7 +16,7 @@ public class DummyServiceImpl
     }
 
     @ValidateMethod
-    public @Valid DummyBean doFailWithInvalidResult()
+    public DummyBean doFailWithInvalidResult()
     {
         DummyBean dummyBean = new DummyBean();
         return dummyBean;
@@ -30,13 +26,13 @@ public class DummyServiceImpl
     public void doFailWithNullArg( String arg ){}
     
     @ValidateMethod
-    public @NotNull DummyBean doFailWithNullResult()
+    public DummyBean doFailWithNullResult()
     {
         return null;
     }
 
     @ValidateMethod
-    public @Valid DummyBean proceedOkWithDefinedArg( String arg )
+    public DummyBean proceedOkWithDefinedArg( String arg )
     {
         DummyBean dummyBean = new DummyBean();
         dummyBean.setSomeProperty( "someProperty" );

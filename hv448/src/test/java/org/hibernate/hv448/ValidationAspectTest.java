@@ -1,6 +1,7 @@
 package org.hibernate.hv448;
 
 import javax.validation.ConstraintViolationException;
+import javax.validation.ValidationException;
 
 import org.hibernate.hv448.dummyservice.DummyBean;
 import org.hibernate.hv448.dummyservice.DummyService;
@@ -20,22 +21,22 @@ public class ValidationAspectTest
     @Autowired
     private DummyService dummyService;
     
-    @Test( expected=ConstraintViolationException.class )
+    @Test( expected=ValidationException.class )
     public void doFailWithEmptyArg() {
         dummyService.doFailWithEmptyArg( "" );
     }
     
-    @Test( expected=ConstraintViolationException.class )
+    @Test( expected=ValidationException.class )
     public void doFailWithInvalidResult() {
         dummyService.doFailWithInvalidResult();
     }
     
-    @Test( expected=ConstraintViolationException.class )
+    @Test( expected=ValidationException.class )
     public void doFailWithNullArg() {
         dummyService.doFailWithNullArg( null );
     }
     
-    @Test( expected=ConstraintViolationException.class )
+    @Test( expected=ValidationException.class )
     public void doFailWithNullResult() {
         dummyService.doFailWithNullResult();
     }
